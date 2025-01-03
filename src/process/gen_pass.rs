@@ -41,7 +41,7 @@ pub fn process_genpass(
     let password = String::from_utf8(password.clone())?;
     // println!("{:?}", password.clone());
     let estimate = zxcvbn(&password, &[]);
-    println!("{}", estimate.score());
+    eprintln!("{}", estimate.score());
 
     Ok(String::from_utf8(password.into())?)
 }
